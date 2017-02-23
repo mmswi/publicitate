@@ -1,0 +1,32 @@
+{% extends '_layouts/base.nunjucks' %}
+
+{% import "_modules/header-index/header-index.nunjucks" as header %}
+{% import "_modules/footer/footer.nunjucks" as footer %}
+
+{% block header %}
+  {{header.content({
+    class: "site-header"
+  })}}
+
+{% endblock %}
+
+{% block content %}
+<div class="main-container">
+  <div class="yeogurt-info">
+    <h1>Welcome to Yeogurt!</h1>
+    <p>
+      Take a look at the <a>documentation</a> and start mixing up something awesome.
+    </p>
+    <p>
+      <img src="images/yeogurt-swirl.png" width="75px" class="logo" />
+    </p>
+  </div>
+</div>
+<code class="version">v1.5.3</code>
+{% endblock %}
+
+{% block footer %}
+  {{footer.content({
+    class: "site-footer"
+  })}}
+{% endblock %}

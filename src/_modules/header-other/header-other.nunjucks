@@ -1,0 +1,16 @@
+{% import "_modules/navigation/navigation.nunjucks" as nav %}
+{% macro content(spec) %}
+
+{% set spec = spec or {} %}
+{% set _class = spec.class or '' %}
+
+<div class="{{_class}}">
+  {% block nav %}
+    {{nav.content({
+      class: "site-nav"
+    })}}
+  {% endblock %}
+<h1>OTHER HEADER</h1>
+  <p>This is an example paragraph for the header-other module</p>
+</div>
+{% endmacro %}

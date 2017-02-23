@@ -1,0 +1,14 @@
+{% macro content(spec) %}
+
+{% set spec = spec or {} %}
+{% set _class = spec.class or '' %}
+
+<nav class="{{_class}}">
+  <ul class="nav-wrapper">
+    <li><a href="#despre" class="nav_link">Despre noi</a></li>
+    <li><a href="#produse" class="nav_link">Produse</a></li>
+    <li><a href="#portofoliu" class="nav_link">Portofoliu</a></li>
+    <li><a href="#contact" class="nav_link">Contact</a></li>
+  </ul>
+</nav>
+{% endmacro %}

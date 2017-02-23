@@ -1,0 +1,23 @@
+{% extends '_layouts/base.nunjucks' %}
+
+{% import "_modules/header-other/header-other.nunjucks" as header %}
+{% import "_modules/footer/footer.nunjucks" as footer %}
+
+{% block config %}
+  {# Correct base url pathing for this page #}
+  {% set baseUrl = '../' %}
+{% endblock %}
+{% block header %}
+  {{header.content({
+    class: "other-header"
+  })}}
+{% endblock %}
+{% block content %}
+<p>product page</p>
+{% endblock %}
+
+{% block footer %}
+  {{footer.content({
+    class: "site-footer"
+  })}}
+{% endblock %}
